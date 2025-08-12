@@ -1,0 +1,22 @@
+[package]
+name = "predictions_platform"
+version = "0.1.0"
+description = "Predictions Platform"
+edition = "2021"
+
+[lib]
+crate-type = ["cdylib", "lib"]
+name = "predictions_platform"
+
+[features]
+default = []
+cpi = ["no-entrypoint"]
+no-entrypoint = []
+no-idl = []
+no-log-ix-name = []
+idl-build = ["anchor-lang/idl-build"]
+
+[dependencies]
+anchor-lang = "0.30.1"
+solana-program = "=2.0.17"
+pyth-solana-receiver-sdk = "0.3.2"
